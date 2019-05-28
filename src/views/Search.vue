@@ -1,11 +1,11 @@
 <template>
     <div class="home">
-        <MoviesList path="upcoming" :opts="{}" />
+        <MoviesList path="search" :opts="this.$route.query" />
     </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue, Watch } from 'vue-property-decorator';
 import MoviesList from '@/components/MoviesList.vue';
 
 @Component({
@@ -13,7 +13,7 @@ import MoviesList from '@/components/MoviesList.vue';
     MoviesList,
   },
 })
-export default class Home extends Vue {
+export default class Search extends Vue {
 
 }
 </script>
